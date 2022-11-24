@@ -29,11 +29,11 @@ This project is a enhance version of [https://github.com/dongyuanxin/vuepress-pl
 
 1. Artalk server crash after post a comment?
 
-it is a bug, already fixed in 1.0.2 .
+   it is a bug, already fixed in 1.0.2 .
 
 2. Some times comment component not load?
 
-Clear browser cache and reload page again.
+   Clear browser cache and reload page again.
 
 If you have other questions, please mail to youweics@163.com or open an issue
 
