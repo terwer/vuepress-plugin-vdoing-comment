@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-vdoing-comment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Comment plugin in vuepress vdoing theme, supports Gitalk, Valine, Artalk...",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/terwer/vuepress-plugin-vdoing-comment/issues"
   },
-  "homepage": "https://github.com/terwer/vuepress-plugin-vdoing-comment/README.md",
+  "homepage": "https://github.com/terwer/vuepress-plugin-vdoing-comment/blob/main/README.md",
   "dependencies": {
     "ejs": "^2.6.1",
     "gitalk": "^1.5.0",
