@@ -115,8 +115,8 @@ export const provider = {
             new Artalk({
                 // ...renderConfig(COMMENT_OPTIONS, { frontmatter }),
                 el: `#${commentDomID}`,
-                pageKey: COMMENT_OPTIONS.id, // 页面链接
-                pageTitle: COMMENT_OPTIONS.title, // 页面标题
+                pageKey: '', // 页面链接
+                pageTitle: '', // 页面标题
                 server: COMMENT_OPTIONS.server, // 后端地址
                 site: COMMENT_OPTIONS.site,
             });

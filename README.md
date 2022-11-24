@@ -168,10 +168,6 @@ module.exports = {
       {
         choosen: 'artalk', 
         options: {
-          /* 公共属性 */
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', // 页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // 评论的标题
-          /* artalk专属属性 */
           server: 'Artalk backend server',
           site: 'Artalk site'
         }
