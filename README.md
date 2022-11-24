@@ -1,7 +1,6 @@
 # vuepress-plugin-vdoing-comment
 
 [![](https://img.shields.io/badge/online-preview-faad14.svg?style=popout-square)](https://terwer.space/post/hello-world.html)
-[![](https://img.shields.io/npm/dm/vuepress-plugin-vdoing-comment.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-vdoing-comment)
 [![](https://img.shields.io/badge/vuepress-v1.x-3eaf7c.svg?style=popout-square)](https://vuepress.vuejs.org/)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)
 ![version](https://img.shields.io/github/release/terwer/vuepress-plugin-vdoing-comment.svg?style=flat-square)
