@@ -121,6 +121,40 @@ export const provider = {
                 site: COMMENT_OPTIONS.site,
             });
 
+            setTimeout(() => {
+                if (COMMENT_OPTIONS.disableEmotion) {
+                    const btnList = document.querySelectorAll("span.atk-plug-btn")
+                    btnList.forEach(btn => {
+                        if (btn.innerHTML.trim().indexOf("表情") > -1) {
+                            var picElem = btn
+                            console.log(picElem)
+                            picElem.remove()
+                        }
+                    })
+                }
+
+                if (COMMENT_OPTIONS.disablePicture) {
+                    const btnList = document.querySelectorAll("span.atk-plug-btn")
+                    btnList.forEach(btn => {
+                        if (btn.innerHTML.trim().indexOf("图片") > -1) {
+                            var picElem = btn
+                            console.log(picElem)
+                            picElem.remove()
+                        }
+                    })
+                }
+
+                if (COMMENT_OPTIONS.disablePreview) {
+                    const btnList = document.querySelectorAll("span.atk-plug-btn")
+                    btnList.forEach(btn => {
+                        if (btn.innerHTML.trim().indexOf("预览") > -1) {
+                            var picElem = btn
+                            console.log(picElem)
+                            picElem.remove()
+                        }
+                    })
+                }
+            }, 500)
         },
         clear(commentDomID) {
             const last = document.querySelector(`#${commentDomID}`)
