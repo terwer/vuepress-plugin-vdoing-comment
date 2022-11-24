@@ -26,24 +26,35 @@ This project is a enhance version of [https://github.com/dongyuanxin/vuepress-pl
 
 ## FAQ
 
-1. Artalk server crash after post a comment?
+1.  Artalk server crash after post a comment?
 
-   it is a bug, already fixed in 1.0.2 .
+    it is a bug, already fixed in 1.0.2 .
 
-2. Some times comment component not load?
+2.  Some times comment component not load?
 
-   Clear browser cache and reload page again.
+    Clear browser cache and reload page again.
 
-3. Dark mode not look well?
+3.  Dark mode not look well?
 
-   add following css to `docs/.vuepress/styles/palette.styl`
+    add following css to `docs/.vuepress/styles/palette.styl`
   
-   ```css
-   .theme-mode-dark #vuepress-plugin-vdoing-comment{
-     --at-color-bg: --bodyBg;
-     color: #ffffff;
-   }
-   ```
+    ```css
+    .theme-mode-dark #vuepress-plugin-vdoing-comment {
+      --at-color-bg: --bodyBg;
+      color: #ffffff;
+      --at-color-font: #ffffff;
+      --at-color-bg-transl: --bodyBg;
+      --at-color-bg-grey: #373a40
+    }
+    
+    .theme-mode-dark #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher > span:hover, .atk-editor-plug-emoticons > .atk-grp-switcher > span.active {
+      background: var(--at-color-bg-grey);
+    }
+    
+    .theme-mode-dark #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher {
+      background: var(--at-color-bg-grey)
+    }
+    ```
 
 If you have other questions, please mail to youweics@163.com or open an issue
 
