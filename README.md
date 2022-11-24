@@ -20,10 +20,22 @@ It is well-tested via [vuepress-vdoing-theme](https://github.com/xugaoyi/vuepres
     - [Use in Valine](#use-in-valine)
     - [Use in Artalk](#use-in-artalk)
     - [How to hide page comment](#how-to-hide-page-comment)
-  
+
 ## Copyright
 
 This project is a enhance version of [https://github.com/dongyuanxin/vuepress-plugin-comment](https://github.com/dongyuanxin/vuepress-plugin-comment)
+
+## FAQ
+
+1. Artalk server crash after post a comment?
+
+it is a bug, already fixed in 1.0.2 .
+
+2. Some times comment component not load?
+
+Clear browser cache and reload page again.
+
+If you have other questions, please mail to youweics@163.com or open an issue
 
 ## Features
 
@@ -166,10 +178,10 @@ module.exports = {
     [
       'vuepress-plugin-vdoing-comment',
       {
-        choosen: 'artalk', 
+        choosen: 'artalk',
         options: {
-          server: 'Artalk backend server',
-          site: 'Artalk site'
+          server: 'Artalk backend server, like: http://localhost:8080',
+          site: 'sitename'
         }
       }
     ]
@@ -185,7 +197,7 @@ For example:
 
 ```yml
 ---
-comment: false 
+comment: false
 # comments: false 
 ---
 ```
