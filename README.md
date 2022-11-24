@@ -34,6 +34,17 @@ This project is a enhance version of [https://github.com/dongyuanxin/vuepress-pl
 
    Clear browser cache and reload page again.
 
+3. Dark mode not look well?
+
+   add following css to `docs/.vuepress/styles/palette.styl`
+  
+   ```css
+   .theme-mode-dark #vuepress-plugin-vdoing-comment{
+     --at-color-bg: --bodyBg;
+     color: #ffffff;
+   }
+   ```
+
 If you have other questions, please mail to youweics@163.com or open an issue
 
 ## Features
