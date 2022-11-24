@@ -202,8 +202,8 @@ module.exports = {
       {
         choosen: 'artalk',
         options: {
-          server: 'Artalk backend server, like: http://localhost:8080',
-          site: 'sitename'
+            server: 'https://my-artalk-server',
+            site: '站点名称',
         }
       }
     ]
