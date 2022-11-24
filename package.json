@@ -1,0 +1,37 @@
+{
+  "name": "vuepress-plugin-vdoing-comment",
+  "version": "1.0.0",
+  "description": "Comment plugin in vuepress vdoing theme, supports Gitalk, Valine, Artalk...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/terwer/vuepress-plugin-vdoing-comment.git"
+  },
+  "keywords": [
+    "vuepress",
+    "comment",
+    "plugin",
+    "vue",
+    "gitalk",
+    "valine",
+    "artalk"
+  ],
+  "author": "terwer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terwer/vuepress-plugin-vdoing-comment/issues"
+  },
+  "homepage": "https://github.com/terwer/vuepress-plugin-vdoing-comment/README.md",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "gitalk": "^1.5.0",
+    "gitalk-fix": "^1.5.2",
+    "i": "^0.3.6",
+    "npm": "^6.9.0",
+    "valine": "^1.3.9",
+    "artalk": "^2.4.3"
+  }
+}
