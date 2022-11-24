@@ -11,6 +11,7 @@ It is well-tested via [vuepress-vdoing-theme](https://github.com/xugaoyi/vuepres
 
 - [vuepress-plugin-vdoing-comment](#vuepress-plugin-vdoing-comment)
   - [Copyright](#copyright)
+  - [FAQ](#faq)
   - [Features](#features)
   - [Usage](#usage)
     - [Install](#install)
