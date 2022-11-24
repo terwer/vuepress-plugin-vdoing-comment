@@ -202,8 +202,11 @@ module.exports = {
       {
         choosen: 'artalk',
         options: {
-            server: 'https://my-artalk-server',
-            site: '站点名称',
+            server: 'https://my-artalk-server', // （必填）
+            site: '站点名称', // （必填）
+            // disableEmotion: false, // 是否禁用表情（可选）
+            // disablePicture: true, // 是否禁用图片（可选）
+            // disablePreview: false // 是否禁用预览（可选）
         }
       }
     ]
