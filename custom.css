@@ -1,3 +1,7 @@
+.artalk{
+    width: unset !important;
+}
+
 /* 暗黑模式 */
 .theme-mode-dark #vuepress-plugin-vdoing-comment {
     --at-color-bg: --bodyBg;
