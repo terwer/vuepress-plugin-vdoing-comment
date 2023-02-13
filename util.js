@@ -7,14 +7,14 @@ loadScript(COMMENT_CHOOSEN)
 
 const defaultChoosen = 'comment plugins'
 console.log(
-    `How to use "${COMMENT_CHOOSEN || defaultChoosen}" in ${config.name}@v${config.version}:`,
+    `Current frontend version is ${config.dependencies.artalk} , plugin version is ${config.name}@v${config.version} , more details:`,
     config.homepage
 )
 
 /**
  * Lazy load pkg
- * 
- * @param {String} name 
+ *
+ * @param {String} name
  */
 export function loadScript(name) {
     if (name === 'valine') {
@@ -26,6 +26,7 @@ export function loadScript(name) {
             .then(pkg => Gitalk = pkg.default)
     } else if (name === "artalk") {
         import('artalk/dist/Artalk.css')
+            .then(() => import('./custom.css'))
             .then(() => import('artalk'))
             .then(pkg => Artalk = pkg.default)
     }
@@ -33,9 +34,9 @@ export function loadScript(name) {
 
 /**
  * Render ejs strings in configuration
- * 
- * @param {Object} config 
- * @param {Object} data 
+ *
+ * @param {Object} config
+ * @param {Object} data
  */
 export function renderConfig(config, data) {
     const result = {}
@@ -70,7 +71,7 @@ export const provider = {
             const parentDOM = document.querySelector(COMMENT_CONTAINER)
             parentDOM.appendChild(commentDOM)
 
-            const gittalk = new Gitalk(renderConfig(COMMENT_OPTIONS, { frontmatter }))
+            const gittalk = new Gitalk(renderConfig(COMMENT_OPTIONS, {frontmatter}))
             gittalk.render(commentDomID)
         },
         clear(commentDomID) {
@@ -91,7 +92,7 @@ export const provider = {
             parentDOM.appendChild(commentDOM)
 
             new Valine({
-                ...renderConfig(COMMENT_OPTIONS, { frontmatter }),
+                ...renderConfig(COMMENT_OPTIONS, {frontmatter}),
                 el: `#${commentDomID}`
             })
         },
@@ -121,40 +122,17 @@ export const provider = {
                 site: COMMENT_OPTIONS.site,
             });
 
-            setTimeout(() => {
-                if (COMMENT_OPTIONS.disableEmotion) {
-                    const btnList = document.querySelectorAll("span.atk-plug-btn")
-                    btnList.forEach(btn => {
-                        if (btn.innerHTML.trim().indexOf("表情") > -1) {
-                            var picElem = btn
-                            // console.log(picElem)
-                            picElem.remove()
-                        }
-                    })
-                }
+            if (COMMENT_OPTIONS.disableEmotion) {
+                import('./custom-emo.css')
+            }
 
-                if (COMMENT_OPTIONS.disablePicture) {
-                    const btnList = document.querySelectorAll("span.atk-plug-btn")
-                    btnList.forEach(btn => {
-                        if (btn.innerHTML.trim().indexOf("图片") > -1) {
-                            var picElem = btn
-                            // console.log(picElem)
-                            picElem.remove()
-                        }
-                    })
-                }
+            if (COMMENT_OPTIONS.disablePicture) {
+                import('./custom-pic.css')
+            }
 
-                if (COMMENT_OPTIONS.disablePreview) {
-                    const btnList = document.querySelectorAll("span.atk-plug-btn")
-                    btnList.forEach(btn => {
-                        if (btn.innerHTML.trim().indexOf("预览") > -1) {
-                            var picElem = btn
-                            // console.log(picElem)
-                            picElem.remove()
-                        }
-                    })
-                }
-            }, 500)
+            if (COMMENT_OPTIONS.disablePreview) {
+                import('./custom-pre.css')
+            }
         },
         clear(commentDomID) {
             const last = document.querySelector(`#${commentDomID}`)

@@ -1,0 +1,40 @@
+/* 暗黑模式 */
+.theme-mode-dark #vuepress-plugin-vdoing-comment {
+    --at-color-bg: --bodyBg;
+    color: #ffffff;
+    --at-color-font: #ffffff;
+    --at-color-bg-transl: --bodyBg;
+    --at-color-bg-grey: #373a40
+}
+
+.theme-mode-dark #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher > span:hover, .atk-editor-plug-emoticons > .atk-grp-switcher > span.active {
+    background: var(--at-color-bg-grey);
+}
+
+.theme-mode-dark #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher {
+    background: var(--at-color-bg-grey)
+}
+
+/* 阅读模式 */
+.theme-mode-read #vuepress-plugin-vdoing-comment {
+    --at-color-bg: --bodyBg;
+    --at-color-border: var(--borderColor);
+    color: var(--textColor);
+    --at-color-font: var(--textLightenColor);
+    --at-color-bg-transl: --bodyBg;
+    --at-color-bg-grey: #f2d8be
+}
+
+.theme-mode-read #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher > span:hover, .atk-editor-plug-emoticons > .atk-grp-switcher > span.active {
+    background: var(--borderColor);
+    color: #ffffff;
+}
+
+.theme-mode-read .atk-main-editor>.atk-bottom .atk-plug-btn.active{
+    color: var(--textColor);
+}
+
+.theme-mode-read #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher {
+    background: var(--at-color-bg-grey);
+    color: #ffffff;
+}
