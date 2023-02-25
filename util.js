@@ -59,20 +59,47 @@ export function renderConfig(config, data) {
     return result
 }
 
+function setBtnHidden(sel, cls) {
+    const ele = document.querySelector(sel)
+    if (!sel) {
+        return
+    }
+    ele.classList.add(cls)
+}
+
 /**
  * 定时监测，达到某个条件加上class
- *
- * @param sel 选择器
- * @param cls css类
  */
-function watchButton(sel, cls) {
+function watchButton() {
     const id = setInterval(function () {
-        const ele = document.querySelector(sel)
-        if (ele && ele.classList) {
-            ele.classList.add(cls)
+        const eles = document.querySelectorAll(".atk-plug-btn")
+        if (eles && eles.length > 0) {
+            if (eles.length === 3) {
+                console.log("Artalk自带图片已开启")
+                if (COMMENT_OPTIONS.disableEmotion) {
+                    setBtnHidden('.atk-plug-btn:nth-child(1)', "atk-plug-btn-emo-hidden")
+                }
+
+                if (COMMENT_OPTIONS.disablePicture) {
+                    setBtnHidden('.atk-plug-btn:nth-child(2)', "atk-plug-btn-pic-hidden")
+                }
+
+                if (COMMENT_OPTIONS.disablePreview) {
+                    setBtnHidden('.atk-plug-btn:nth-child(3)', "atk-plug-btn-pre-hidden")
+                }
+            } else {
+                console.log("Artalk自带图片已关闭")
+                if (COMMENT_OPTIONS.disableEmotion) {
+                    setBtnHidden('.atk-plug-btn:nth-child(1)', "atk-plug-btn-emo-hidden")
+                }
+
+                if (COMMENT_OPTIONS.disablePreview) {
+                    setBtnHidden('.atk-plug-btn:nth-child(2)', "atk-plug-btn-pre-hidden")
+                }
+            }
+
             clearInterval(id)
         }
-
     }, 500)
 }
 
@@ -140,17 +167,7 @@ export const provider = {
                 site: COMMENT_OPTIONS.site,
             });
 
-            if (COMMENT_OPTIONS.disableEmotion) {
-                watchButton('.atk-plug-btn:nth-child(1)', "atk-plug-btn-emo-hidden")
-            }
-
-            if (COMMENT_OPTIONS.disablePicture) {
-                watchButton('.atk-plug-btn:nth-child(2)', "atk-plug-btn-pic-hidden")
-            }
-
-            if (COMMENT_OPTIONS.disablePreview) {
-                watchButton('.atk-plug-btn:nth-child(3)', "atk-plug-btn-pre-hidden")
-            }
+            watchButton()
         },
         clear(commentDomID) {
             const last = document.querySelector(`#${commentDomID}`)
