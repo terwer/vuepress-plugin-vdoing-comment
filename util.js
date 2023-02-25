@@ -60,6 +60,24 @@ export function renderConfig(config, data) {
 }
 
 /**
+ * 定时监测，达到某个条件加上class
+ *
+ * @param sel 选择器
+ * @param cls css类
+ */
+function watchButton(sel, cls) {
+    const id = setInterval(function () {
+        const ele = document.querySelector(sel)
+        if (ele && ele.classList) {
+            ele.classList.add(cls)
+            clearInterval(id)
+        }
+
+    }, 500)
+}
+
+
+/**
  * Support Gitalk and so on.
  */
 export const provider = {
@@ -123,15 +141,15 @@ export const provider = {
             });
 
             if (COMMENT_OPTIONS.disableEmotion) {
-                import('./custom-emo.css')
+                watchButton('.atk-plug-btn:nth-child(1)', "atk-plug-btn-emo-hidden")
             }
 
             if (COMMENT_OPTIONS.disablePicture) {
-                import('./custom-pic.css')
+                watchButton('.atk-plug-btn:nth-child(2)', "atk-plug-btn-pic-hidden")
             }
 
             if (COMMENT_OPTIONS.disablePreview) {
-                import('./custom-pre.css')
+                watchButton('.atk-plug-btn:nth-child(3)', "atk-plug-btn-pre-hidden")
             }
         },
         clear(commentDomID) {

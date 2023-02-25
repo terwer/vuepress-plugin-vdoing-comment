@@ -42,3 +42,7 @@
     background: var(--at-color-bg-grey);
     color: #ffffff;
 }
+
+.atk-plug-btn-emo-hidden,.atk-plug-btn-pic-hidden,.atk-plug-btn-pre-hidden{
+    display:none !important;
+}
