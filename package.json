@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-vdoing-comment",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Comment plugin in vuepress vdoing theme, supports Gitalk, Valine, Artalk...",
   "main": "index.js",
   "scripts": {
