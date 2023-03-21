@@ -2,6 +2,10 @@
     width: unset !important;
 }
 
+.artalk pre code, .atk-layer-wrap pre code{
+    white-space: pre-wrap !important;
+}
+
 /* 暗黑模式 */
 .theme-mode-dark #vuepress-plugin-vdoing-comment {
     --at-color-bg: --bodyBg;
