@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/terwer/vuepress-plugin-vdoing-comment/compare/v1.2.0...v1.3.0) (2024-06-13)
+
+
+### Features
+
+* update artalk to 2.8.7 ([62041a1](https://github.com/terwer/vuepress-plugin-vdoing-comment/commit/62041a10e833dcbd748455575605235d3b1631b4))
+* update artalk to 2.8.7 ([ef7908f](https://github.com/terwer/vuepress-plugin-vdoing-comment/commit/ef7908f78b0f35cc9cb9518916ebd9a72f03fe21))
+
 ## [1.2.0](https://github.com/terwer/vuepress-plugin-vdoing-comment/compare/v1.1.0...v1.2.0) (2024-06-13)
 
 
