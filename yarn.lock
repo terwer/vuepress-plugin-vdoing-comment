@@ -238,7 +238,7 @@ array.prototype.reduce@^1.0.5:
     es-array-method-boxes-properly "^1.0.0"
     is-string "^1.0.7"
 
-artalk@^2.8.3:
+artalk@^2.8.7:
   version "2.8.7"
   resolved "https://registry.npmjs.org/artalk/-/artalk-2.8.7.tgz#606a3cae4846805dcd5d62c794112d51aa5ef2dd"
   integrity sha512-Pl6oKnG0mLf6/c0X93SEmUm7RqqO1zsfvf4j8EzO25pvcDn9pJdYQqLrWKupaHwO7JLvEcgq5pBBrJCLmBKGpw==
